@@ -134,5 +134,29 @@ const Wrapper = styled.div`
       margin-top: 2rem;
     }
 
+    @media only screen and (max-width: 600px) {
+      padding: 0;
+
+      .graph-p-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 2rem;
+      }
+
+      p {
+        margin-top: -1rem;
+        width: 80%;
+        text-align: center;
+      }
+
+      .btn-container button {
+        margin-top: 2rem;
+      }
+    }
+
 `
 export default BubbleSortComp

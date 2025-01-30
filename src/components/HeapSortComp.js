@@ -57,7 +57,7 @@ const HeapSortComp = () => {
           setCurrentIndex(i);
           [arr[i], arr[largest]] = [arr[largest], arr[i]]; // Swap
           setArray([...arr]);
-          await animationDelay(10000);
+          await animationDelay(1000);
           await heapify(arr, n, largest);
       }
   };
@@ -187,6 +187,34 @@ const Wrapper = styled.div`
 
     p {
       margin-top: 2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      h3 {
+        margin-top: -2rem;
+      }
+      padding: 0;
+
+      .graph-p-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 2rem;
+      }
+
+      p {
+        margin-top: -1rem;
+        width: 80%;
+        text-align: center;
+      }
+
+      .btn-container button {
+        margin-top: 2rem;
+      }
     }
 `
 export default HeapSortComp
